@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+}
+.btn_stack {
+  background-color: rgba(240, 255, 255, 0.579);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+button {
+  opacity: 0.85;
+  color: aliceblue;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+  }
+
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.olive {
+  background-color: olive;
+}
+.gray {
+  background-color: gray;
+}
+.yellow {
+  background-color: yellow;
+  color: #000;
+}
+.pink {
+  background-color: pink;
+  color: #000;
+}
+.purple {
+  background-color: purple;
+}
+.lavender {
+  background-color: lavender;
+  color: #000;
+}
+.white {
+  background-color: white;
+  color: #000;
+}
+.orange {
+  background-color: orange;
+}
