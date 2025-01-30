@@ -1,0 +1,26 @@
+#root {
+  margin: 0 ;
+  padding: 0;
+  text-align: center;
+}
+.container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  gap: 1rem; 
+}
+#increment:hover span{
+  transition: 1s;
+  color: red;
+
+}
+#decrement:hover span{
+  transition: 1s;
+  color: green;
+}
