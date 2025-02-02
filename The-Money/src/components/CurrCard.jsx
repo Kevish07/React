@@ -1,22 +1,47 @@
-import React from 'react'
+import React, {useId} from 'react'
 import './currCard.css'
 
-function currCard() {
+function currCard({
+  label,
+  amount,
+  onAmountChange,
+  onCurrencyChange,
+  currencyOptions = [],
+  selectCurrency = "USD",
+  amountDisable = false,
+  currencyDisable = false,
+  className = ""
+}) {
+  const amountId = useId()
   return (
     <>
     <div className="card">
         <div className="notation">
-            <span>From</span>
+            <span id={amountId}>{label}</span>
             <span>Currency Type</span>
         </div>
         <div className="input">
-            <input type="number" placeholder='0' />
-            <select>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="JPY">JPY</option>
-                <option value="GBP">GBP</option>
-                <option value="AUD">AUD</option>
+            <input 
+            id={amountId}
+            type="number" 
+            placeholder='Enter your Amount' 
+            disabled={amountDisable}
+            value={amount}
+            onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+            />
+            <select
+            value={selectCurrency}
+            disabled={currencyDisable}
+            onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
+            >
+              {currencyOptions.map((currency) => (
+                <option 
+                value={currency}
+                key={currency}
+                >
+                  {currency}
+                </option>
+              ))}
             </select>
         </div>
         
